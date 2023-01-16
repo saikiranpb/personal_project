@@ -1,15 +1,45 @@
 import React from 'react'
+import Header from '../Header'
+import Directory from '../Directory/Directory'
+import Footer from '../Footer'
 
 export default function Home() {
-
+  const categories=[
+    {
+      "id": 1,
+      "title": "hats",
+      "imageUrl": "https://i.ibb.co/cvpntL1/hats.png"
+    },
+    {
+      "id": 2,
+      "title": "jackets",
+      "imageUrl": "https://i.ibb.co/px2tCc3/jackets.png"
+    },
+    {
+      "id": 3,
+      "title": "sneakers",
+      "imageUrl": "https://i.ibb.co/0jqHpnp/sneakers.png"
+    },
+    {
+      "id": 4,
+      "title": "womens",
+      "imageUrl": "https://i.ibb.co/GCCdy8t/womens.png"
+    },
+    {
+      "id": 5,
+      "title": "mens",
+      "imageUrl": "https://i.ibb.co/R70vBrQ/men.png"
+    }
+  ]
+  
   return (
-    <div style={{display:'flex',height:'50px',fontWeight:'bold',padding:'10px 30px'}}>
-      <div>
-        <div>
-          <h2>Hats</h2>
-          <p>Shop Now</p>
-        </div>
+    <>  
+      <Header/>
+      <div style={{height:'700px',padding:'30px 30px'}}>
+      <Directory categories={categories}/>
       </div>
-    </div>
-  )
-}
+      <Footer/>
+    </>
+      )
+    }
+    
