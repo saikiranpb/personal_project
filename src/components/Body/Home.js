@@ -35,7 +35,7 @@ export default function Home() {
   return (
     <>  
       <Header/>
-      <div style={{height:'700px',padding:'30px 30px'}}>
+      <div style={{height:'700px', padding:'30px 30px'}}>
       <Directory categories={categories}/>
       </div>
       <Footer/>
