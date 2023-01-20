@@ -1,10 +1,23 @@
 import React from 'react'
+import {Outlet,Link} from 'react-router-dom'
+import {ReactComponent as CrwnLogo} from '../assets/crown.svg'
+import './Header.styles.scss'
 
 export default function Header() {
   return (
-    <div style={{display:'flex',height:'50px',color:'white',background:'#353941',fontWeight:'bold',padding:'10px 30px'}}>
-        <div style={{display:'flex',justifyContent:'left',background:'#353941',width:'50%',verticalAlign:'middle'}}>Header</div>
-        <div style={{display:'flex',justifyContent:'right',background:'#353941' ,width:'50%',verticalAlign:'middle'}}>Nav</div>
+   <>
+    <div className='navigation'>
+        <div> 
+          <Link className='logo-container' to='/'>
+            <CrwnLogo className='logo'/>
+          </Link>     
+        </div>
+        <div className='nav-links-container'>
+          <Link className='nav-link' to='/shop'>SHOP</Link>
+          <Link className='nav-link' to='/signIn'>SIGN IN</Link>
+        </div>
     </div>
+    <Outlet/>
+    </>
   )
 }

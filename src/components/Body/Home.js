@@ -33,13 +33,12 @@ export default function Home() {
   ]
   
   return (
-    <>  
-      <Header/>
+    <div>  
       <div style={{height:'700px', padding:'30px 30px'}}>
       <Directory categories={categories}/>
       </div>
       <Footer/>
-    </>
+    </div>
       )
     }
     

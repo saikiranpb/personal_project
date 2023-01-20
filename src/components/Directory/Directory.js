@@ -7,7 +7,7 @@ function Directory (props){
     <div className='categories-container'>
     {
     props.categories.map(item=>
-          <div className='category-container'>
+          <div className='category-container' key={item.id}>
             <div className='background-image' style={{backgroundImage:`url(${item.imageUrl})`}}/>
           <div className='category-body-container'>
             <h2>{item.title}</h2>

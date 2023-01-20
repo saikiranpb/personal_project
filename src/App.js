@@ -1,19 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
 import Header from './components/Header'
-import Footer from './components/Footer'
 import {BrowserRouter, Routes,Route} from 'react-router-dom'
 import Home from './components/Body/Home'
+import Shop from './components/Body/Shop';
+import SignIn from './components/Sign-in/SignIn';
 function App() {
   return (
-      <BrowserRouter>
-     
-       
+      <BrowserRouter>      
           <Routes>
-            <Route path='/' element={<Home/>}/>
+            <Route path='/' element={<Header/>}>
+              <Route index element={<Home/>}/>
+              <Route path='shop' element={<Shop/>}/>
+              <Route path='signIn' element={<SignIn/>}/>
+            </Route>
           </Routes>
-   
-
       </BrowserRouter>
   );
 }
