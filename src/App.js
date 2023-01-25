@@ -1,8 +1,8 @@
 import Header from './components/Header'
 import {BrowserRouter, Routes,Route} from 'react-router-dom'
 import Home from './components/Body/Home'
-import Shop from './components/Body/Shop';
-import SignIn from './components/Sign-in/SignIn';
+import Shop from './components/shop/Shop';
+import Authentication from './components/Authentication/Authentication';
 function App() {
   return (
       <BrowserRouter>      
@@ -10,7 +10,7 @@ function App() {
             <Route path='/' element={<Header/>}>
               <Route index element={<Home/>}/>
               <Route path='shop' element={<Shop/>}/>
-              <Route path='signIn' element={<SignIn/>}/>
+              <Route path='auth' element={<Authentication/>}/>
             </Route>
           </Routes>
       </BrowserRouter>
